@@ -20,16 +20,16 @@ import re
 
 driver = webdriver.Chrome('venv/chromedriver_mac64/chromedriver')
 
-driver.get("https://www.youtube.com/")
+driver.get("https://jobs.ams.at/public/emps/jobs?page=1&query=Software-EntwicklerIn&location=wien&JOB_OFFER_TYPE=SB_WKO&JOB_OFFER_TYPE=IJ&JOB_OFFER_TYPE=BA&PERIOD=ALL&sortField=PERIOD")
 
 # Проверка наличия всплывающего окна
-popup_present = EC.presence_of_element_located((By.XPATH, '//*[@id="dialog"]'))
+popup_present = EC.presence_of_element_located((By.XPATH, '/html/body/sn-root/sn-cookie-banner/div/div/div'))
 
 time.sleep(5)
 # popup_decline_button = driver.find_element(By.CSS_SELECTOR, ".eom-button-row button:nth-child(1)")
 
-popup_decline_button = driver.find_element(By.XPATH, '//*[@id="content"]/div[2]/div[6]/div[1]/ytd-button-renderer[1]')
+popup_decline_button = driver.find_element(By.XPATH, '/html/body/sn-root/sn-cookie-banner/div/div/div/div[2]/div/div[2]/button')
 
 popup_decline_button.click()
 
-time.sleep(10)
+time.sleep(15)
