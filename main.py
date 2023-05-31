@@ -18,7 +18,7 @@ import datetime
 # подключаем библиотеку для работы с регулярными выражениями
 import re
 
-driver = webdriver.Chrome('venv/chromedriver_mac64/chromedriver')
+driver = webdriver.Chrome('venv/chromedriver_win32/chromedriver.exe')
 
 driver.get(
     "https://jobs.ams.at/public/emps/jobs?page=1&query=Software-EntwicklerIn&location=wien&JOB_OFFER_TYPE=SB_WKO&JOB_OFFER_TYPE=IJ&JOB_OFFER_TYPE=BA&PERIOD=ALL&sortField=PERIOD")
